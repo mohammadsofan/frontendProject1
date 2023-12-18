@@ -15,6 +15,8 @@
     --white-95: #f1f1f3;
     --white-97: #f7f7f8;
     --white-99: #fcfcfd;
+    --orange-90: #ffeacc;
+    --orange-97: #fff9f0;
 }
 
 /* normlization start*/
@@ -375,7 +377,8 @@ header .hamburger-icon {
 
 .benefits-section h2,
 .courses-section h2,
-.testimonials-section h2 {
+.testimonials-section h2,
+.pricing-section h2 {
     font-size: 38px;
     color: var(--Grey-15, #262626);
     font-weight: 600;
@@ -384,7 +387,8 @@ header .hamburger-icon {
 
 .benefits-section .benefits-text,
 .courses-section .courses-text,
-.testimonials-section .testimonials-text {
+.testimonials-section .testimonials-text,
+.pricing-section .pricing-text {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -393,7 +397,8 @@ header .hamburger-icon {
 
 .benefits-section .benefits-text p,
 .courses-section .courses-text p,
-.testimonials-section .testimonials-text p {
+.testimonials-section .testimonials-text p,
+.pricing-section .pricing-text p {
     max-width: 70%;
     color: var(--Grey-35, #59595a);
     font-size: 16px;
@@ -490,13 +495,15 @@ header .hamburger-icon {
 
     .benefits-section h2,
     .courses-section h2,
-    .testimonials-section h2 {
+    .testimonials-section h2,
+    .pricing-section h2 {
         font-size: 28px;
     }
 
     .benefits-section .benefits-text,
     .courses-section .courses-text,
-    .testimonials-section .testimonials-text {
+    .testimonials-section .testimonials-text,
+    .pricing-section .pricing-text {
         gap: 20px;
         flex-direction: column;
         align-items: flex-start;
@@ -504,7 +511,8 @@ header .hamburger-icon {
 
     .benefits-section .benefits-text p,
     .courses-section .courses-text p,
-    .testimonials-section .testimonials-text p {
+    .testimonials-section .testimonials-text p,
+    .pricing-section .pricing-text p {
         max-width: 100%;
         font-size: 14px;
     }
@@ -694,6 +702,12 @@ header .hamburger-icon {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
+    justify-content: space-between;
+}
+
+.testimonials-section .testimonials .row .testimonial .testimonial-footer .user {
+    display: flex;
+    align-items: center;
     gap: 10px;
 }
 
@@ -704,7 +718,6 @@ header .hamburger-icon {
 }
 
 .testimonials-section .testimonials .row .testimonial .testimonial-footer a {
-    margin-left: auto;
     display: flex;
     padding: 14px 16px;
     justify-content: center;
@@ -725,7 +738,6 @@ header .hamburger-icon {
 /* ----testimonials section styling (diffrent screen sizes) start---- */
 @media (max-width: 800px) and (min-width: 621px) {
     .testimonials-section .testimonials .row .testimonial .testimonial-footer a {
-        margin-left: 0;
         width: 100%;
     }
 }
@@ -757,7 +769,241 @@ header .hamburger-icon {
 }
 
 @media (max-width: 380px) {
+    .testimonials-section .testimonials .row .testimonial .testimonial-footer {
+        gap: 10px;
+    }
+
+    .testimonials-section .testimonials .row .testimonial .testimonial-footer .user {
+        width: 100%;
+    }
+
     .testimonials-section .testimonials .row .testimonial .testimonial-footer a {
         margin-left: 0;
     }
 }
+
+/* ----testimonials section styling (diffrent screen sizes) end---- */
+
+/* ----pricing section styling start */
+
+.pricing-section {
+    margin-top: 100px;
+}
+
+.pricing-section .pricing-text p {
+    max-width: 65%;
+}
+
+.pricing-section .pricing-text .buttons {
+    display: flex;
+    padding: 12px;
+    border-radius: 8px;
+    background: var(--white);
+}
+
+.pricing-section .pricing-text .buttons a {
+    font-weight: 500;
+    color: var(--grey-30);
+    padding: 12px 24px;
+    border-radius: 6px;
+}
+
+.pricing-section .pricing-text .buttons a.active {
+    background: var(--orange-50);
+    color: var(--white);
+}
+
+.pricing-section .cards {
+    margin-top: 50px;
+    background-color: var(--white);
+    border-radius: 12px;
+    padding: 50px;
+}
+
+.pricing-section .cards .row {
+    gap: 30px;
+}
+
+.pricing-section .cards .row .card {
+    width: calc((100% - 30px) / 2);
+    display: flex;
+    padding: 40px 24px 24px 24px;
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+    border-radius: 12px;
+    border: 1px solid var(--white-95);
+    background: var(--white-99);
+}
+
+.pricing-section .cards .row .card h3 {
+    padding: 10px 22px;
+    border-radius: 4px;
+    border: 1px solid var(--orange-90);
+    background: var(--orange-97);
+    color: var(--grey-15);
+    font-size: 18px;
+    font-weight: 500;
+    width: 100%;
+    text-align: center;
+}
+
+.pricing-section .cards .row .card .price {
+    color: var(--grey-15);
+    font-size: 60px;
+    font-weight: 600;
+    line-height: 73%;
+}
+
+.pricing-section .cards .row .card .price span {
+    color: var(--grey-30);
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 73%;
+}
+
+.pricing-section .cards .row .card .features-box {
+    width: 100%;
+    display: flex;
+    padding: 30px;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+    border-radius: 14px 14px 0px 0px;
+    border: 1px solid var(--white-95);
+    background: var(--white);
+}
+
+.pricing-section .cards .row .card .features-box h4 {
+    color: var(--grey-15);
+    text-align: center;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 150%;
+}
+
+.pricing-section .cards .row .card .features-box .features {
+    display: flex;
+    padding: 0px 30px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+.pricing-section .cards .row .card .features-box .features .feature {
+    padding: 12px;
+    border-radius: 6px;
+    border: 1px solid var(--white-95);
+    width: 100%;
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+.pricing-section .cards .row .card .features-box .features .feature p {
+    color: var(--grey-30);
+    line-height: 150%;
+}
+
+.pricing-section .cards .row .card .col a {
+    display: flex;
+    padding: 18px 24px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0px 0px 8px 8px;
+    background: var(--orange-50);
+    width: 100%;
+    color: var(--white);
+    font-weight: 600;
+    line-height: 150%;
+}
+
+/* ----pricing section styling end */
+
+/* ----pricing section styling (diffrent screen sizes) start---- */
+
+@media (max-width: 1085px) {
+    .pricing-section .cards {
+        padding: 20px;
+    }
+
+    .pricing-section .cards .card {
+        padding: 40px 15px 24px 15px;
+    }
+
+    .pricing-section .cards .card .features-box {
+        padding: 15px;
+    }
+
+    .pricing-section .cards .row .card .features-box .features {
+        padding: 0;
+    }
+
+    .pricing-section .cards .card .features-box .features .feature {
+        padding: 8px;
+    }
+}
+
+@media (max-width: 700px) {
+    .pricing-section .pricing-text {
+        gap: 20px;
+    }
+
+    .pricing-section .pricing-text p {
+        max-width: 100%;
+    }
+
+    .pricing-section .pricing-text .buttons {
+        margin: auto;
+    }
+
+    .pricing-section .cards .row .card {
+        width: 100%;
+    }
+}
+
+@media (max-width: 550px) {
+    .pricing-section .cards {
+        margin-top: 40px;
+        padding: 20px;
+    }
+
+    .pricing-section .cards .row .card {
+        padding: 30px 20px 20px 20px;
+        gap: 30px;
+        width: 100%;
+    }
+
+    .pricing-section .cards .row .card h3 {
+        font-size: 16px;
+    }
+
+    .pricing-section .cards .row .card .price {
+        font-size: 50px;
+    }
+
+    .pricing-section .cards .row .card .features-box {
+        padding: 20px;
+        gap: 20px;
+    }
+
+    .pricing-section .cards .row .card .features-box .features {
+        padding: 0;
+    }
+}
+
+@media (max-width: 350px) {
+    .pricing-section .cards .row .card .features-box {
+        padding: 10px;
+    }
+
+    .pricing-section .cards .row .card .col .features-box .features .feature {
+        padding: 8px;
+    }
+
+    .pricing-section .cards .row .card .col a {
+        padding: 12px 18px;
+    }
+}
+
+/* ----pricing section styling (diffrent screen sizes) end---- */
