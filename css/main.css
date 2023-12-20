@@ -3,281 +3,283 @@
 
 /* global variables */
 :root {
-    --orange-50: #ff9500;
-    --orange-95: #fff4e5;
-    --black: #262626;
-    --gray: #333333;
-    --gray-10: #1a1a1a;
-    --grey-15: #262626;
-    --grey-30: #4c4c4d;
-    --grey-20: #333;
-    --white: #fff;
-    --white-95: #f1f1f3;
-    --white-97: #f7f7f8;
-    --white-99: #fcfcfd;
-    --orange-90: #ffeacc;
-    --orange-97: #fff9f0;
+  --orange-50: #ff9500;
+  --orange-95: #fff4e5;
+  --black: #262626;
+  --gray: #333333;
+  --gray-10: #1a1a1a;
+  --grey-15: #262626;
+  --grey-20: #333;
+  --grey-30: #4c4c4d;
+  --grey-35: #59595a;
+  --grey-40: #656567;
+  --white: #fff;
+  --white-95: #f1f1f3;
+  --white-97: #f7f7f8;
+  --white-99: #fcfcfd;
+  --orange-90: #ffeacc;
+  --orange-97: #fff9f0;
 }
 
 /* normlization start*/
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 html {
-    font-size: 14px;
+  font-size: 14px;
 }
 
 body {
-    background: var(--white-97);
-    font-family: "Be Vietnam Pro", sans-serif;
+  background: var(--white-97);
+  font-family: "Be Vietnam Pro", sans-serif;
 }
 
 ul {
-    list-style: none;
+  list-style: none;
 }
 
 a {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 img {
-    display: block;
+  display: block;
 }
 
 /* ----normlization end---- */
 
 /* common classes start */
 .container {
-    width: calc(100% - 160px);
-    margin: auto;
+  width: calc(100% - 160px);
+  margin: auto;
 }
 
 @media screen and (max-width: 900px) {
-    .container {
-        width: calc(100% - 32px);
-    }
+  .container {
+    width: calc(100% - 32px);
+  }
 }
 
 .row {
-    display: flex;
-    flex-wrap: wrap;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 /* ----common classes end---- */
 
 /* header styling start */
 header {
-    position: fixed;
-    top: 0;
-    z-index: 10;
-    width: 100%;
-    border-bottom: 1px solid var(--white-95, #f1f1f3);
-    padding: 16px 0;
-    background-color: var(--white-97);
+  position: fixed;
+  top: 0;
+  z-index: 10;
+  width: 100%;
+  border-bottom: 1px solid var(--white-95, #f1f1f3);
+  padding: 16px 0;
+  background-color: var(--white-97);
 }
 
 header .row {
-    align-items: center;
+  align-items: center;
 }
 
 header nav .logo,
 header nav .buttons {
-    width: fit-content;
+  width: fit-content;
 }
 
 header nav {
-    flex-grow: 1;
-    margin-left: 50px;
+  flex-grow: 1;
+  margin-left: 50px;
 }
 
 header nav .list {
-    display: flex;
-    align-items: center;
-    gap: 26px;
+  display: flex;
+  align-items: center;
+  gap: 26px;
 }
 
 header nav .list {
-    display: flex;
-    gap: 26px;
+  display: flex;
+  gap: 26px;
 }
 
 header nav .list a {
-    color: var(--black);
-    transition: all 0.3s;
+  color: var(--black);
+  transition: all 0.3s;
 }
 
 header nav .list a:hover,
 header nav .list .active {
-    padding: 12px 20px;
-    border-radius: 6px;
-    background: var(--white-95, #f1f1f3);
+  padding: 12px 20px;
+  border-radius: 6px;
+  background: var(--white-95, #f1f1f3);
 }
 
 header .buttons {
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 30px;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 30px;
 }
 
 header .buttons a:first-of-type {
-    color: var(--black);
+  color: var(--black);
 }
 
 header .buttons a:last-of-type {
-    color: var(--white);
-    background: var(--orange-50);
-    padding: 12px 24px;
-    border-radius: 6px;
+  color: var(--white);
+  background: var(--orange-50);
+  padding: 12px 24px;
+  border-radius: 6px;
 }
 
 header .hamburger-icon {
-    display: none;
+  display: none;
 }
 
 /* ----header styling end---- */
 
 /* header styling (diffrent screen sizes) start */
 @media screen and (max-width: 900px) {
-    header nav {
-        display: none;
-    }
+  header nav {
+    display: none;
+  }
 
-    header .hamburger-icon {
-        display: block;
-    }
+  header .hamburger-icon {
+    display: block;
+  }
 
-    header .logo {
-        flex-grow: 1;
-    }
+  header .logo {
+    flex-grow: 1;
+  }
 
-    header .hamburger-icon {
-        margin-left: 20px;
-    }
+  header .hamburger-icon {
+    margin-left: 20px;
+  }
 }
 
 @media screen and (max-width: 576px) {
-    header .buttons {
-        gap: 20px;
-    }
+  header .buttons {
+    gap: 20px;
+  }
 
-    header .buttons a:last-of-type {
-        padding: 12px 20px;
-    }
+  header .buttons a:last-of-type {
+    padding: 12px 20px;
+  }
 }
 
 /* ----header styling (diffrent screen sizes) end---- */
 
 /* hero section styling start */
 .hero .row {
-    position: relative;
-    height: 100vh;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
+  position: relative;
+  height: 100vh;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
 }
 
 .hero .row .hero-box {
-    position: relative;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    background-color: var(--white);
-    padding: 12px 24px 12px 12px;
-    border-radius: 8px;
-    border: 1px solid var(--white-95);
-    background: var(--white-99);
-    margin-bottom: 16px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background-color: var(--white);
+  padding: 12px 24px 12px 12px;
+  border-radius: 8px;
+  border: 1px solid var(--white-95);
+  background: var(--white-99);
+  margin-bottom: 16px;
 }
 
 .hero .row .hero-box h1 {
-    font-size: 36px;
-    font-weight: 600;
-    color: var(--gray-10);
-    line-height: 150%;
+  font-size: 36px;
+  font-weight: 600;
+  color: var(--gray-10);
+  line-height: 150%;
 }
 
 .hero .row .hero-box h1 span {
-    color: var(--orange-50);
+  color: var(--orange-50);
 }
 
 .hero .row .hero-box::before {
-    content: "";
-    position: absolute;
-    top: -30px;
-    left: -30px;
-    width: 39px;
-    height: 43px;
-    background-image: url("../images/icons/lines.svg");
-    background-size: cover;
-    background-position: center;
+  content: "";
+  position: absolute;
+  top: -30px;
+  left: -30px;
+  width: 39px;
+  height: 43px;
+  background-image: url("../images/icons/lines.svg");
+  background-size: cover;
+  background-position: center;
 }
 
 .hero .row h2 {
-    color: var(--grey-15);
-    font-size: 28px;
-    font-weight: 500;
-    line-height: 150%;
-    margin-bottom: 6px;
+  color: var(--grey-15);
+  font-size: 28px;
+  font-weight: 500;
+  line-height: 150%;
+  margin-bottom: 6px;
 }
 
 .hero .row p {
-    color: var(--grey-15);
-    font-size: 16px;
-    line-height: 150%;
-    margin-bottom: 50px;
+  color: var(--grey-15);
+  font-size: 16px;
+  line-height: 150%;
+  margin-bottom: 50px;
 }
 
 .hero .row .buttons {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 12px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
 }
 
 .hero .row .buttons a {
-    border-radius: 6px;
-    padding: 14px 20px;
+  border-radius: 6px;
+  padding: 14px 20px;
 }
 
 .hero .row .buttons a:first-of-type {
-    background: var(--orange-50);
-    color: var(--white);
-    font-weight: 600;
+  background: var(--orange-50);
+  color: var(--white);
+  font-weight: 600;
 }
 
 .hero .row .buttons a:last-of-type {
-    border: 1px solid var(--white-95);
-    background: var(--white);
-    color: var(--grey-15);
-    font-weight: 500;
+  border: 1px solid var(--white-95);
+  background: var(--white);
+  color: var(--grey-15);
+  font-weight: 500;
 }
 
 .hero .row .brands {
-    position: absolute;
-    bottom: 0;
-    display: flex;
-    padding: 24px;
-    border-radius: 8px;
-    border: 1px solid var(--white-95);
-    background: var(--white-99);
-    width: 100%;
-    overflow-x: auto;
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  padding: 24px;
+  border-radius: 8px;
+  border: 1px solid var(--white-95);
+  background: var(--white-99);
+  width: 100%;
+  overflow-x: auto;
 }
 
 .hero .row .brands .brand-item {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: calc((100%) / 7);
-    padding: 20px 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: calc((100%) / 7);
+  padding: 20px 30px;
 }
 
 .hero .row .brands .brand-item:not(:last-of-type) {
-    border-right: 1px solid var(--white-95);
+  border-right: 1px solid var(--white-95);
 }
 
 /* hero section styling end */
@@ -285,45 +287,45 @@ header .hamburger-icon {
 /* ----hero section styling (diffrent screen sizes) start---- */
 
 @media (max-width: 767px) {
-    .hero .row .brands .brand-item {
-        /* to make the overflow scroll work */
-        width: auto;
-    }
+  .hero .row .brands .brand-item {
+    /* to make the overflow scroll work */
+    width: auto;
+  }
 
-    .hero .row .hero-box h1 {
-        font-size: 28px;
-    }
+  .hero .row .hero-box h1 {
+    font-size: 28px;
+  }
 
-    .hero .row h2 {
-        font-size: 24px;
-    }
+  .hero .row h2 {
+    font-size: 24px;
+  }
 }
 
 @media screen and (max-width: 576px) {
-    .hero .row .hero-box {
-        padding: 12px;
-    }
+  .hero .row .hero-box {
+    padding: 12px;
+  }
 
-    .hero .row .hero-box::before {
-        top: -20px;
-        left: -15px;
-    }
+  .hero .row .hero-box::before {
+    top: -20px;
+    left: -15px;
+  }
 
-    .hero .row .hero-box img {
-        width: 35px;
-    }
+  .hero .row .hero-box img {
+    width: 35px;
+  }
 
-    .hero .row .hero-box h1 {
-        font-size: 14px;
-    }
+  .hero .row .hero-box h1 {
+    font-size: 14px;
+  }
 
-    .hero .row .buttons a {
-        padding: 14px 15px;
-    }
+  .hero .row .buttons a {
+    padding: 14px 15px;
+  }
 
-    .hero .row .brands {
-        padding: 10px;
-    }
+  .hero .row .brands {
+    padding: 10px;
+  }
 }
 
 /* ----hero section styling (diffrent screen sizes) end---- */
@@ -331,30 +333,30 @@ header .hamburger-icon {
 /* video section styling start */
 
 .video-section {
-    margin-top: 80px;
+  margin-top: 80px;
 }
 
 .video-section .container {
-    position: relative;
+  position: relative;
 }
 
 .video-section .container img:first-of-type {
-    width: 100%;
-    border-radius: 10px;
+  width: 100%;
+  border-radius: 10px;
 }
 
 .video-section .container svg {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: red;
-    padding: 10px;
-    box-sizing: content-box;
-    border-radius: 50%;
-    border: 4px solid rgba(255, 255, 255, 0.3);
-    background: rgba(255, 255, 255, 0.2);
-    cursor: pointer;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: red;
+  padding: 10px;
+  box-sizing: content-box;
+  border-radius: 50%;
+  border: 4px solid rgba(255, 255, 255, 0.3);
+  background: rgba(255, 255, 255, 0.2);
+  cursor: pointer;
 }
 
 /* video section styling end */
@@ -362,9 +364,9 @@ header .hamburger-icon {
 /* ----video section styling (diffrent screen sizes) start---- */
 
 @media (max-width: 767px) {
-    .video-section {
-        margin-top: 30px;
-    }
+  .video-section {
+    margin-top: 30px;
+  }
 }
 
 /* ----video section styling (diffrent screen sizes) end---- */
@@ -372,103 +374,101 @@ header .hamburger-icon {
 /* benefits section styling start */
 
 .benefits-section {
-    margin-top: 100px;
+  margin-top: 100px;
 }
 
 .benefits-section h2,
 .courses-section h2,
 .testimonials-section h2,
 .pricing-section h2 {
-    font-size: 38px;
-    color: var(--Grey-15, #262626);
-    font-weight: 600;
-    margin-bottom: 4px;
+  font-size: 38px;
+  color: var(--Grey-15, #262626);
+  font-weight: 600;
+  margin-bottom: 4px;
 }
 
 .benefits-section .benefits-text,
 .courses-section .courses-text,
 .testimonials-section .testimonials-text,
 .pricing-section .pricing-text {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
 }
 
 .benefits-section .benefits-text p,
 .courses-section .courses-text p,
 .testimonials-section .testimonials-text p,
 .pricing-section .pricing-text p {
-    max-width: 70%;
-    color: var(--Grey-35, #59595a);
-    font-size: 16px;
+  max-width: 70%;
+  color: var(--Grey-35, #59595a);
+  font-size: 16px;
 }
 
 .benefits-section .benefits-text a,
 .courses-section .courses-text a,
 .testimonials-section .testimonials-text a {
-    color: var(--Grey-15, #262626);
-    font-weight: 500;
-    padding: 14px 20px;
-    border-radius: 6px;
-    border: 1px solid var(--white-95);
-    background: var(--white-99);
+  color: var(--Grey-15, #262626);
+  font-weight: 500;
+  padding: 14px 20px;
+  border-radius: 6px;
+  border: 1px solid var(--white-95);
+  background: var(--white-99);
 }
 
 .benefits-section .cards {
-    margin-top: 60px;
+  margin-top: 60px;
 }
 
 .benefits-section .cards .row {
-    gap: 20px;
+  gap: 20px;
 }
 
 .benefits-section .cards .row .card {
-    width: calc((100% - 40px) / 3);
-    padding: 40px;
-    border-radius: 10px;
-    background: var(--white);
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    gap: 50px;
+  width: calc((100% - 40px) / 3);
+  padding: 40px;
+  border-radius: 10px;
+  background: var(--white);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 50px;
 }
 
 .benefits-section .cards .row .card span {
-    color: var(--Grey-15, #262626);
-    font-size: 60px;
-    font-weight: 700;
-    align-self: flex-end;
+  color: var(--Grey-15, #262626);
+  font-size: 60px;
+  font-weight: 700;
+  align-self: flex-end;
 }
 
 .benefits-section .cards .row .card .text-start {
-    display: flex;
-    flex-direction: column;
-    gap: 14px;
-    align-self: flex-start;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  align-self: flex-start;
 }
 
 .benefits-section .cards .row .card .text-start h3 {
-    color: var(--grey-20);
-    font-size: 24px;
-    font-weight: 600;
-    letter-spacing: -0.144px;
+  color: var(--grey-20);
+  font-size: 24px;
+  font-weight: 600;
+  letter-spacing: -0.144px;
 }
 
 .benefits-section .cards .row .card .text-start p {
-    color: var(--grey-30);
-    font-size: 18px;
+  color: var(--grey-30);
+  font-size: 18px;
 }
 
-.benefits-section .cards .row .card img {
-    display: unset;
-    width: 34px;
-    align-self: flex-end;
-    padding: 20px;
-    border-radius: 8px;
-    border: 1px solid var(--white-95);
-    background: var(--white-99);
-    box-sizing: content-box;
+.benefits-section .cards .row .card a {
+  align-self: flex-end;
+  padding: 14px;
+  border-radius: 8px;
+  border: 1px solid var(--white-95);
+  background: var(--white-99);
+  box-sizing: content-box;
 }
 
 /* benefits section styling end */
@@ -476,70 +476,66 @@ header .hamburger-icon {
 /* ----benefits section styling (diffrent screen sizes) start---- */
 
 @media (max-width: 1300px) {
-    .benefits-section .cards .row .card {
-        width: calc((100% - 20px) / 2);
-    }
+  .benefits-section .cards .row .card {
+    width: calc((100% - 20px) / 2);
+  }
 }
 
 @media (max-width: 990px) {
-    .benefits-section .cards .row .card {
-        gap: 30px;
-        padding: 30px;
-    }
+  .benefits-section .cards .row .card {
+    gap: 30px;
+    padding: 30px;
+  }
 }
 
 @media (max-width: 620px) {
-    .benefits-section {
-        margin-top: 50px;
-    }
+  .benefits-section {
+    margin-top: 50px;
+  }
 
-    .benefits-section h2,
-    .courses-section h2,
-    .testimonials-section h2,
-    .pricing-section h2 {
-        font-size: 28px;
-    }
+  .benefits-section h2,
+  .courses-section h2,
+  .testimonials-section h2,
+  .pricing-section h2 {
+    font-size: 28px;
+  }
 
-    .benefits-section .benefits-text,
-    .courses-section .courses-text,
-    .testimonials-section .testimonials-text,
-    .pricing-section .pricing-text {
-        gap: 20px;
-        flex-direction: column;
-        align-items: flex-start;
-    }
+  .benefits-section .benefits-text,
+  .courses-section .courses-text,
+  .testimonials-section .testimonials-text,
+  .pricing-section .pricing-text {
+    gap: 20px;
+    flex-direction: column;
+    align-items: flex-start;
+  }
 
-    .benefits-section .benefits-text p,
-    .courses-section .courses-text p,
-    .testimonials-section .testimonials-text p,
-    .pricing-section .pricing-text p {
-        max-width: 100%;
-        font-size: 14px;
-    }
+  .benefits-section .benefits-text p,
+  .courses-section .courses-text p,
+  .testimonials-section .testimonials-text p,
+  .pricing-section .pricing-text p {
+    max-width: 100%;
+    font-size: 14px;
+  }
 
-    .benefits-section .cards {
-        margin-top: 40px;
-    }
+  .benefits-section .cards {
+    margin-top: 40px;
+  }
 
-    .benefits-section .cards .row .card {
-        width: 100%;
-    }
+  .benefits-section .cards .row .card {
+    width: 100%;
+  }
 
-    .benefits-section .cards .row .card span {
-        font-size: 50px;
-    }
+  .benefits-section .cards .row .card span {
+    font-size: 50px;
+  }
 
-    .benefits-section .cards .row .card .text-start h3 {
-        font-size: 20px;
-    }
+  .benefits-section .cards .row .card .text-start h3 {
+    font-size: 20px;
+  }
 
-    .benefits-section .cards .row .card .text-start p {
-        font-size: 14px;
-    }
-
-    .benefits-section .cards .row .card img {
-        padding: 14px;
-    }
+  .benefits-section .cards .row .card .text-start p {
+    font-size: 14px;
+  }
 }
 
 /* ----benefits section styling (diffrent screen sizes) end---- */
@@ -547,117 +543,117 @@ header .hamburger-icon {
 /* ----courses section styling start */
 
 .courses-section {
-    margin-top: 100px;
+  margin-top: 100px;
 }
 
 .courses-section .courses {
-    margin-top: 60px;
+  margin-top: 60px;
 }
 
 .courses-section .courses .row {
-    gap: 20px;
+  gap: 20px;
 }
 
 .courses-section .row .course {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    gap: 24px;
-    width: calc((100% - 20px) / 2);
-    padding: 40px;
-    border-radius: 10px;
-    border: 1px solid var(--white-95);
-    background: var(--white);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 24px;
+  width: calc((100% - 20px) / 2);
+  padding: 40px;
+  border-radius: 10px;
+  border: 1px solid var(--white-95);
+  background: var(--white);
 }
 
 .courses-section .row .course img {
-    width: 100%;
+  width: 100%;
 }
 
 .courses-section .row .course .text-row {
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 10px;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
 }
 
 .courses-section .row .course .text-row span {
-    color: var(--Grey-30);
-    padding: 8px 14px;
-    border-radius: 6px;
-    border: 1px solid var(--white-95);
-    background: var(--white);
+  color: var(--Grey-30);
+  padding: 8px 14px;
+  border-radius: 6px;
+  border: 1px solid var(--white-95);
+  background: var(--white);
 }
 
 .courses-section .row .course .text-row h4 {
-    margin-left: auto;
-    color: var(--grey-15);
-    font-size: 16px;
-    font-weight: 500;
-    text-transform: capitalize;
+  margin-left: auto;
+  color: var(--grey-15);
+  font-size: 16px;
+  font-weight: 500;
+  text-transform: capitalize;
 }
 
 .courses-section .row .course .text-col {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 
 .courses-section .row .course .text-col h3 {
-    color: var(--grey-15);
-    font-size: 20px;
-    font-weight: 600;
+  color: var(--grey-15);
+  font-size: 20px;
+  font-weight: 600;
 }
 
 .courses-section .row .course .text-col p {
-    color: var(--grey-30);
-    font-size: 16px;
+  color: var(--grey-30);
+  font-size: 16px;
 }
 
 .courses-section .row .course a {
-    display: block;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 14px 24px;
-    border-radius: 6px;
-    border: 1px solid var(--white-95);
-    background: var(--white-97);
-    color: var(--grey-15);
-    font-weight: 500;
+  display: block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 14px 24px;
+  border-radius: 6px;
+  border: 1px solid var(--white-95);
+  background: var(--white-97);
+  color: var(--grey-15);
+  font-weight: 500;
 }
 
 /* ----courses section styling end */
 
 /* ----courses section styling (diffrent screen sizes) start---- */
 @media (max-width: 1150px) {
-    .courses-section .row .course .text-row h4 {
-        margin-left: 0;
-        width: 100%;
-    }
+  .courses-section .row .course .text-row h4 {
+    margin-left: 0;
+    width: 100%;
+  }
 }
 
 @media (max-width: 620px) {
-    .courses-section {
-        margin-top: 50px;
-    }
+  .courses-section {
+    margin-top: 50px;
+  }
 
-    .courses-section .courses {
-        margin-top: 40px;
-    }
+  .courses-section .courses {
+    margin-top: 40px;
+  }
 
-    .courses-section .row .course {
-        width: 100%;
-        padding: 24px;
-    }
+  .courses-section .row .course {
+    width: 100%;
+    padding: 24px;
+  }
 
-    .courses-section .row .course .text-col h3 {
-        font-size: 18px;
-    }
+  .courses-section .row .course .text-col h3 {
+    font-size: 18px;
+  }
 
-    .courses-section .row .course .text-col p {
-        font-size: 14px;
-    }
+  .courses-section .row .course .text-col p {
+    font-size: 14px;
+  }
 }
 
 /* ----courses section styling (diffrent screen sizes) end---- */
@@ -665,121 +661,131 @@ header .hamburger-icon {
 /* ----testimonials section styling start */
 
 .testimonials-section {
-    margin-top: 100px;
+  margin-top: 100px;
 }
 
 .testimonials-section .testimonials {
-    margin-top: 60px;
+  margin-top: 60px;
 }
 
 .testimonials-section .testimonials .row {
-    gap: 20px;
+  gap: 20px;
 }
 
 .testimonials-section .testimonials .row .testimonial {
-    width: calc((100% - 20px) / 2);
-    border-radius: 10px;
-    border: 1px solid var(--white-95);
-    background: var(--white);
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+  width: calc((100% - 20px) / 2);
+  border-radius: 10px;
+  border: 1px solid var(--white-95);
+  background: var(--white);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .testimonials-section .testimonials .row .testimonial .testimonial-header {
-    padding: 40px;
-    border-bottom: 1px solid var(--white-95);
+  padding: 40px;
+  border-bottom: 1px solid var(--white-95);
 }
 
 .testimonials-section .testimonials .row .testimonial .testimonial-header p {
-    color: var(--grey-30);
-    font-size: 16px;
-    line-height: 150%;
+  color: var(--grey-30);
+  font-size: 16px;
+  line-height: 150%;
 }
 
 .testimonials-section .testimonials .row .testimonial .testimonial-footer {
-    padding: 24px 40px;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-between;
+  padding: 24px 40px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
 }
 
-.testimonials-section .testimonials .row .testimonial .testimonial-footer .user {
-    display: flex;
-    align-items: center;
-    gap: 10px;
+.testimonials-section
+  .testimonials
+  .row
+  .testimonial
+  .testimonial-footer
+  .user {
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
 .testimonials-section .testimonials .row .testimonial .testimonial-footer span {
-    color: var(--grey-20);
-    font-size: 16px;
-    font-weight: 600;
+  color: var(--grey-20);
+  font-size: 16px;
+  font-weight: 600;
 }
 
 .testimonials-section .testimonials .row .testimonial .testimonial-footer a {
-    display: flex;
-    padding: 14px 16px;
-    justify-content: center;
-    align-items: center;
-    color: var(--grey-15);
-    font-weight: 500;
-    border-radius: 6px;
-    border: 1px solid var(--white-95);
-    background: var(--white-97);
+  display: flex;
+  padding: 14px 16px;
+  justify-content: center;
+  align-items: center;
+  color: var(--grey-15);
+  font-weight: 500;
+  border-radius: 6px;
+  border: 1px solid var(--white-95);
+  background: var(--white-97);
 }
 
 .testimonials-section .testimonials .row .testimonial .testimonial-footer img {
-    border-radius: 6px;
+  border-radius: 6px;
 }
 
 /* ----testimonials section styling end */
 
 /* ----testimonials section styling (diffrent screen sizes) start---- */
 @media (max-width: 800px) and (min-width: 621px) {
-    .testimonials-section .testimonials .row .testimonial .testimonial-footer a {
-        width: 100%;
-    }
+  .testimonials-section .testimonials .row .testimonial .testimonial-footer a {
+    width: 100%;
+  }
 }
 
 @media (max-width: 620px) {
-    .testimonials-section {
-        margin-top: 50px;
-    }
+  .testimonials-section {
+    margin-top: 50px;
+  }
 
-    .testimonials-section .testimonials {
-        margin-top: 40px;
-    }
+  .testimonials-section .testimonials {
+    margin-top: 40px;
+  }
 
-    .testimonials-section .testimonials .row .testimonial {
-        width: 100%;
-    }
+  .testimonials-section .testimonials .row .testimonial {
+    width: 100%;
+  }
 
-    .testimonials-section .testimonials .row .testimonial .testimonial-header {
-        padding: 30px;
-    }
+  .testimonials-section .testimonials .row .testimonial .testimonial-header {
+    padding: 30px;
+  }
 
-    .testimonials-section .testimonials .row .testimonial .testimonial-header p {
-        font-size: 14px;
-    }
+  .testimonials-section .testimonials .row .testimonial .testimonial-header p {
+    font-size: 14px;
+  }
 
-    .testimonials-section .testimonials .row .testimonial .testimonial-footer {
-        padding: 20px 30px;
-    }
+  .testimonials-section .testimonials .row .testimonial .testimonial-footer {
+    padding: 20px 30px;
+  }
 }
 
 @media (max-width: 380px) {
-    .testimonials-section .testimonials .row .testimonial .testimonial-footer {
-        gap: 10px;
-    }
+  .testimonials-section .testimonials .row .testimonial .testimonial-footer {
+    gap: 10px;
+  }
 
-    .testimonials-section .testimonials .row .testimonial .testimonial-footer .user {
-        width: 100%;
-    }
+  .testimonials-section
+    .testimonials
+    .row
+    .testimonial
+    .testimonial-footer
+    .user {
+    width: 100%;
+  }
 
-    .testimonials-section .testimonials .row .testimonial .testimonial-footer a {
-        margin-left: 0;
-    }
+  .testimonials-section .testimonials .row .testimonial .testimonial-footer a {
+    margin-left: 0;
+  }
 }
 
 /* ----testimonials section styling (diffrent screen sizes) end---- */
@@ -787,135 +793,135 @@ header .hamburger-icon {
 /* ----pricing section styling start */
 
 .pricing-section {
-    margin-top: 100px;
+  margin-top: 100px;
 }
 
 .pricing-section .pricing-text p {
-    max-width: 65%;
+  max-width: 65%;
 }
 
 .pricing-section .pricing-text .buttons {
-    display: flex;
-    padding: 12px;
-    border-radius: 8px;
-    background: var(--white);
+  display: flex;
+  padding: 12px;
+  border-radius: 8px;
+  background: var(--white);
 }
 
 .pricing-section .pricing-text .buttons a {
-    font-weight: 500;
-    color: var(--grey-30);
-    padding: 12px 24px;
-    border-radius: 6px;
+  font-weight: 500;
+  color: var(--grey-30);
+  padding: 12px 24px;
+  border-radius: 6px;
 }
 
 .pricing-section .pricing-text .buttons a.active {
-    background: var(--orange-50);
-    color: var(--white);
+  background: var(--orange-50);
+  color: var(--white);
 }
 
 .pricing-section .cards {
-    margin-top: 50px;
-    background-color: var(--white);
-    border-radius: 12px;
-    padding: 50px;
+  margin-top: 50px;
+  background-color: var(--white);
+  border-radius: 12px;
+  padding: 50px;
 }
 
 .pricing-section .cards .row {
-    gap: 30px;
+  gap: 30px;
 }
 
 .pricing-section .cards .row .card {
-    width: calc((100% - 30px) / 2);
-    display: flex;
-    padding: 40px 24px 24px 24px;
-    flex-direction: column;
-    align-items: center;
-    gap: 50px;
-    border-radius: 12px;
-    border: 1px solid var(--white-95);
-    background: var(--white-99);
+  width: calc((100% - 30px) / 2);
+  display: flex;
+  padding: 40px 24px 24px 24px;
+  flex-direction: column;
+  align-items: center;
+  gap: 50px;
+  border-radius: 12px;
+  border: 1px solid var(--white-95);
+  background: var(--white-99);
 }
 
 .pricing-section .cards .row .card h3 {
-    padding: 10px 22px;
-    border-radius: 4px;
-    border: 1px solid var(--orange-90);
-    background: var(--orange-97);
-    color: var(--grey-15);
-    font-size: 18px;
-    font-weight: 500;
-    width: 100%;
-    text-align: center;
+  padding: 10px 22px;
+  border-radius: 4px;
+  border: 1px solid var(--orange-90);
+  background: var(--orange-97);
+  color: var(--grey-15);
+  font-size: 18px;
+  font-weight: 500;
+  width: 100%;
+  text-align: center;
 }
 
 .pricing-section .cards .row .card .price {
-    color: var(--grey-15);
-    font-size: 60px;
-    font-weight: 600;
-    line-height: 73%;
+  color: var(--grey-15);
+  font-size: 60px;
+  font-weight: 600;
+  line-height: 73%;
 }
 
 .pricing-section .cards .row .card .price span {
-    color: var(--grey-30);
-    font-size: 16px;
-    font-weight: 500;
-    line-height: 73%;
+  color: var(--grey-30);
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 73%;
 }
 
 .pricing-section .cards .row .card .features-box {
-    width: 100%;
-    display: flex;
-    padding: 30px;
-    flex-direction: column;
-    align-items: center;
-    gap: 24px;
-    border-radius: 14px 14px 0px 0px;
-    border: 1px solid var(--white-95);
-    background: var(--white);
+  width: 100%;
+  display: flex;
+  padding: 30px;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+  border-radius: 14px 14px 0px 0px;
+  border: 1px solid var(--white-95);
+  background: var(--white);
 }
 
 .pricing-section .cards .row .card .features-box h4 {
-    color: var(--grey-15);
-    text-align: center;
-    font-size: 18px;
-    font-weight: 500;
-    line-height: 150%;
+  color: var(--grey-15);
+  text-align: center;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 150%;
 }
 
 .pricing-section .cards .row .card .features-box .features {
-    display: flex;
-    padding: 0px 30px;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 20px;
+  display: flex;
+  padding: 0px 30px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
 }
 
 .pricing-section .cards .row .card .features-box .features .feature {
-    padding: 12px;
-    border-radius: 6px;
-    border: 1px solid var(--white-95);
-    width: 100%;
-    display: flex;
-    gap: 8px;
-    align-items: center;
+  padding: 12px;
+  border-radius: 6px;
+  border: 1px solid var(--white-95);
+  width: 100%;
+  display: flex;
+  gap: 8px;
+  align-items: center;
 }
 
 .pricing-section .cards .row .card .features-box .features .feature p {
-    color: var(--grey-30);
-    line-height: 150%;
+  color: var(--grey-30);
+  line-height: 150%;
 }
 
 .pricing-section .cards .row .card .col a {
-    display: flex;
-    padding: 18px 24px;
-    justify-content: center;
-    align-items: center;
-    border-radius: 0px 0px 8px 8px;
-    background: var(--orange-50);
-    width: 100%;
-    color: var(--white);
-    font-weight: 600;
-    line-height: 150%;
+  display: flex;
+  padding: 18px 24px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0px 0px 8px 8px;
+  background: var(--orange-50);
+  width: 100%;
+  color: var(--white);
+  font-weight: 600;
+  line-height: 150%;
 }
 
 /* ----pricing section styling end */
@@ -923,87 +929,235 @@ header .hamburger-icon {
 /* ----pricing section styling (diffrent screen sizes) start---- */
 
 @media (max-width: 1085px) {
-    .pricing-section .cards {
-        padding: 20px;
-    }
+  .pricing-section .cards {
+    padding: 20px;
+  }
 
-    .pricing-section .cards .card {
-        padding: 40px 15px 24px 15px;
-    }
+  .pricing-section .cards .card {
+    padding: 40px 15px 24px 15px;
+  }
 
-    .pricing-section .cards .card .features-box {
-        padding: 15px;
-    }
+  .pricing-section .cards .card .features-box {
+    padding: 15px;
+  }
 
-    .pricing-section .cards .row .card .features-box .features {
-        padding: 0;
-    }
+  .pricing-section .cards .row .card .features-box .features {
+    padding: 0;
+  }
 
-    .pricing-section .cards .card .features-box .features .feature {
-        padding: 8px;
-    }
+  .pricing-section .cards .card .features-box .features .feature {
+    padding: 8px;
+  }
 }
 
 @media (max-width: 700px) {
-    .pricing-section .pricing-text {
-        gap: 20px;
-    }
+  .pricing-section .pricing-text {
+    gap: 20px;
+  }
 
-    .pricing-section .pricing-text p {
-        max-width: 100%;
-    }
+  .pricing-section .pricing-text p {
+    max-width: 100%;
+  }
 
-    .pricing-section .pricing-text .buttons {
-        margin: auto;
-    }
+  .pricing-section .pricing-text .buttons {
+    margin: auto;
+  }
 
-    .pricing-section .cards .row .card {
-        width: 100%;
-    }
+  .pricing-section .cards .row .card {
+    width: 100%;
+  }
 }
 
 @media (max-width: 550px) {
-    .pricing-section .cards {
-        margin-top: 40px;
-        padding: 20px;
-    }
+  .pricing-section .cards {
+    margin-top: 40px;
+    padding: 20px;
+  }
 
-    .pricing-section .cards .row .card {
-        padding: 30px 20px 20px 20px;
-        gap: 30px;
-        width: 100%;
-    }
+  .pricing-section .cards .row .card {
+    padding: 30px 20px 20px 20px;
+    gap: 30px;
+    width: 100%;
+  }
 
-    .pricing-section .cards .row .card h3 {
-        font-size: 16px;
-    }
+  .pricing-section .cards .row .card h3 {
+    font-size: 16px;
+  }
 
-    .pricing-section .cards .row .card .price {
-        font-size: 50px;
-    }
+  .pricing-section .cards .row .card .price {
+    font-size: 50px;
+  }
 
-    .pricing-section .cards .row .card .features-box {
-        padding: 20px;
-        gap: 20px;
-    }
+  .pricing-section .cards .row .card .features-box {
+    padding: 20px;
+    gap: 20px;
+  }
 
-    .pricing-section .cards .row .card .features-box .features {
-        padding: 0;
-    }
+  .pricing-section .cards .row .card .features-box .features {
+    padding: 0;
+  }
 }
 
 @media (max-width: 350px) {
-    .pricing-section .cards .row .card .features-box {
-        padding: 10px;
-    }
+  .pricing-section .cards .row .card .features-box {
+    padding: 10px;
+  }
 
-    .pricing-section .cards .row .card .col .features-box .features .feature {
-        padding: 8px;
-    }
+  .pricing-section .cards .row .card .col .features-box .features .feature {
+    padding: 8px;
+  }
 
-    .pricing-section .cards .row .card .col a {
-        padding: 12px 18px;
-    }
+  .pricing-section .cards .row .card .col a {
+    padding: 12px 18px;
+  }
 }
 
 /* ----pricing section styling (diffrent screen sizes) end---- */
+
+/* ----footer styling start */
+
+footer {
+  margin-top: 135px;
+  padding: 60px 80px 20px 80px;
+  background: var(--white);
+}
+
+footer .row {
+  padding-bottom: 30px;
+}
+
+footer .row .start-footer {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+footer .row .start-footer img {
+  width: fit-content;
+}
+
+footer .row .start-footer .contact {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 14px;
+}
+
+footer .row .start-footer .contact .item {
+  display: flex;
+  gap: 4px;
+}
+
+footer .row .start-footer .contact .item p {
+  color: var(--grey-15);
+  font-size: 16px;
+  line-height: 150%;
+}
+
+footer .row .end-footer {
+  width: 60%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+}
+
+footer .row .end-footer .item {
+  width: calc((100% - 48px) / 3);
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+footer .row .end-footer .item h3 {
+  color: var(--grey-15);
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 150%;
+}
+
+footer .row .end-footer .item nav {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+footer .row .end-footer .item nav a {
+  color: var(--grey-35);
+  font-size: 16px;
+  line-height: 150%;
+}
+
+footer .row .end-footer .item:last-of-type .social {
+  display: flex;
+  gap: 14px;
+}
+
+footer .row .end-footer .item:last-of-type .social img {
+  padding: 12px;
+  border-radius: 6px;
+  border: 1px solid var(--white-95);
+  background: var(--white-97);
+}
+
+footer .copyright {
+  width: 100%;
+  text-align: center;
+  padding-top: 30px;
+  border-top: 1px solid #f1f1f3;
+  color: var(--grey-40);
+  line-height: 150%;
+}
+
+/* ----footer styling end */
+
+/* ----footer styling (diffrent screen sizes) start---- */
+
+@media (max-width: 800px) {
+  footer {
+    padding: 60px 60px 20px 60px;
+  }
+
+  footer .row {
+    gap: 24px;
+  }
+
+  footer .row .start-footer {
+    width: calc(40% - 12px);
+  }
+
+  footer .row .end-footer {
+    width: calc(60% - 12px);
+  }
+
+  footer .row .end-footer .item {
+    width: calc((100% - 24px) / 2);
+  }
+}
+
+@media (max-width: 650px) {
+  footer {
+    padding: 50px 20px 24px 20px;
+  }
+
+  footer .row .start-footer,
+  footer .row .end-footer {
+    width: 100%;
+  }
+
+  footer .row .start-footer .contact .item p {
+    font-size: 15px;
+  }
+
+  footer .row .end-footer .item:last-of-type {
+    width: 100%;
+  }
+
+  footer .row .end-footer .item nav a {
+    font-size: 14px;
+  }
+}
+/* ----footer styling (diffrent screen sizes) end---- */
