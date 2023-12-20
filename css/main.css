@@ -1141,6 +1141,7 @@ footer .copyright {
 @media (max-width: 650px) {
   footer {
     padding: 50px 20px 24px 20px;
+    margin-top: 80px;
   }
 
   footer .row .start-footer,
