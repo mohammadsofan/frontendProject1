@@ -738,6 +738,9 @@ header .hamburger-icon {
 
 /* ----testimonials section styling (diffrent screen sizes) start---- */
 @media (max-width: 800px) and (min-width: 621px) {
+  .testimonials-section .testimonials .row .testimonial .testimonial-footer {
+    gap: 10px;
+  }
   .testimonials-section .testimonials .row .testimonial .testimonial-footer a {
     width: 100%;
   }
