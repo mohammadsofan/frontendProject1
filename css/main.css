@@ -836,6 +836,7 @@ header .hamburger-icon {
   padding: 40px 24px 24px 24px;
   flex-direction: column;
   align-items: center;
+  justify-content: space-around;
   gap: 50px;
   border-radius: 12px;
   border: 1px solid var(--white-95);
