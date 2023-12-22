@@ -839,7 +839,6 @@ header .hamburger-icon {
   padding: 40px 24px 24px 24px;
   flex-direction: column;
   align-items: center;
-  justify-content: space-around;
   gap: 50px;
   border-radius: 12px;
   border: 1px solid var(--white-95);
@@ -871,7 +870,11 @@ header .hamburger-icon {
   font-weight: 500;
   line-height: 73%;
 }
-
+.pricing-section .cards .row .card .col {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
 .pricing-section .cards .row .card .features-box {
   width: 100%;
   display: flex;
@@ -882,6 +885,7 @@ header .hamburger-icon {
   border-radius: 14px 14px 0px 0px;
   border: 1px solid var(--white-95);
   background: var(--white);
+  flex-grow: 1;
 }
 
 .pricing-section .cards .row .card .features-box h4 {
